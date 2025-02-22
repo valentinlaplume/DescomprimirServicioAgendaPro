@@ -4,7 +4,13 @@ function procesarAgenda() {
   // Obtener el nombre de la empleada (4 líneas después de "Lista desagrupada")
   const lineas = texto.split('\n');
   const indiceListaDesagrupada = lineas.findIndex(linea => linea.includes("Lista desagrupada"));
-  const nombreEmpleada = lineas[indiceListaDesagrupada + 4] || "Empleada no encontrada";
+const nombreEmpleada =
+  lineas[indiceListaDesagrupada + 3] 
+    ? lineas[indiceListaDesagrupada + 3]
+    : lineas[indiceListaDesagrupada + 5] 
+    ? lineas[indiceListaDesagrupada + 5]
+    : "Empleada no encontrada";
+
 
   const dias = texto.split(
     /(?=Lunes|Martes|Miércoles|Jueves|Viernes|Sábado|Domingo)/g
