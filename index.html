@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Agenda Luciana - Detalle Semanal</title>
+    <style>
+        .dia {
+            margin: 20px 0;
+        }
+        .dia-titulo {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #333;
+        }
+        .servicio {
+            margin-left: 20px;
+        }
+
+        .dia {
+            margin: 20px 0;
+        }
+        .dia-titulo {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #333;
+        }
+        .servicio {
+            margin-left: 20px;
+        }
+        .total {
+            margin-top: 10px;
+            margin-left: 20px;
+            font-weight: bold;
+            color: #666;
+        }
+        .empleada-nombre {
+        text-align: center;
+        font-weight: bold;
+        margin: 10px 0;
+        color: #2c3e50;
+        }
+
+        .servicio.repetido {
+        color: #e74c3c;  /* Color rojo para servicios repetidos */
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Procesador de Agenda</h1>
+    <textarea id="textoAgenda" rows="10" cols="50" placeholder="Pega aquí el texto de la agenda..."></textarea>
+    <br>
+    <button onclick="procesarAgenda()">Descomprimir Agenda</button>
+    <div id="resultado"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
